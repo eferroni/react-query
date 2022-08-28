@@ -26,7 +26,7 @@ export function useCancelAppointment(): UseMutateFunction<
   const { mutate } = useMutation(removeAppointmentUser, {
     onSuccess: () => {
       queryClient.invalidateQueries([queryKeys.appointments]);
-      toast({ title: 'Appointment cancelled!', status: 'warning' });
+      toast({ title: 'Appointment canceled!', status: 'warning' });
     },
   });
 
